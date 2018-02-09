@@ -29,7 +29,7 @@ public class Exer06 {
         int[][] jogoDaVelha = new int[3][3];
 
         System.out.println(
-                "\tCOLUNA 1 COLUNA 2 COLUNA 3\n"
+                "\n\tCOLUNA 1 COLUNA 2 COLUNA 3\n"
                 + "\n\t\t|\t|\n"
                 + "LINHA 1 \t|\t|\n"
                 + "\t\t|\t|\n"
