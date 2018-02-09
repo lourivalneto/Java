@@ -94,7 +94,7 @@ public class Exer06 {
                         }
                     }
 
-                } else if (j % 2 != 0) {
+                } else {
                     System.out.println("\t" + nomeJogador2 + ", em que posição "
                             + "você irá marcar o \"X\")?: ");
                     System.out.println("Linha: ");
