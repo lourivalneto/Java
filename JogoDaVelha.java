@@ -34,9 +34,7 @@ public class Exer06 {
         "\t\t\t|\t|\n" +
         "\t\t\t|\t|\n" +
         "\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n");
-        System.out.println("");
-        System.out.println("");
+        "\t\t\t|\t|\n\n\n");
 
         for (int i = 0; i < jogoDaVelha.length; i++) {
             for (int j = 0; j < jogoDaVelha[i].length; j++) {
