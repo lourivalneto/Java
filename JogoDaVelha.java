@@ -67,6 +67,11 @@ public class Exer06 {
 
                     if (jogoDaVelha[linhaJogador1 - 1][colunaJogador1 - 1] == 0) {
                         jogoDaVelha[linhaJogador1 - 1][colunaJogador1 - 1] = -1;
+                        resposta = verificaGanhador1(jogoDaVelha);
+                        if (resposta) {
+                            System.out.println(nomeJogador1 + ", você é o grande ganhador deste Jogo.");
+                            break;
+                        }
                     } else { // EVITANDO PREENCHIMENTO EM POSIÇÃO JÁ PREENCHIDA
                         do {
                             System.out.println("Essa posição já está marcada. Tente outra posição.");
@@ -111,6 +116,11 @@ public class Exer06 {
 
                     if (jogoDaVelha[linhaJogador2 - 1][colunaJogador2 - 1] == 0) {
                         jogoDaVelha[linhaJogador2 - 1][colunaJogador2 - 1] = 1;
+                        resposta = verificaGanhador2(jogoDaVelha);
+                        if (resposta) {
+                            System.out.println(nomeJogador2 + ", você é o grande ganhador deste Jogo.");
+                            break;
+                        }
                     } else { // EVITANDO PREENCHIMENTO EM POSIÇÃO JÁ PREENCHIDA
                         do {
                             System.out.println("Essa posição já está marcada. Tente outra posição.");
@@ -126,7 +136,7 @@ public class Exer06 {
                             } while ((linhaJogador2 < 1 || linhaJogador2 > 3) || (colunaJogador2 < 1 || colunaJogador2 > 3));
                         } while (jogoDaVelha[linhaJogador2 - 1][colunaJogador2 - 1] != 0);
                         jogoDaVelha[linhaJogador2 - 1][colunaJogador2 - 1] = 1;
-                        resposta = verificaGanhador1(jogoDaVelha);
+                        resposta = verificaGanhador2(jogoDaVelha);
                         if (resposta) {
                             System.out.println(nomeJogador2 + ", você é o grande ganhador deste Jogo.");
                             break;
@@ -155,6 +165,12 @@ public class Exer06 {
                     resposta = true;
                 } else if (vetorJogo[0][2] + vetorJogo[1][1] + vetorJogo[2][0] == -3) {
                     resposta = true;
+                } else if (vetorJogo[0][0] + vetorJogo[1][0] + vetorJogo[2][0] == -3) {
+                    resposta = true;
+                } else if (vetorJogo[0][1] + vetorJogo[1][1] + vetorJogo[2][1] == -3) {
+                    resposta = true;
+                } else if (vetorJogo[0][2] + vetorJogo[1][2] + vetorJogo[2][2] == -3) {
+                    resposta = true;
                 }
 
             }
@@ -181,6 +197,12 @@ public class Exer06 {
                 } else if (vetorJogo[0][0] + vetorJogo[1][1] + vetorJogo[2][2] == 3) {
                     resposta = true;
                 } else if (vetorJogo[0][2] + vetorJogo[1][1] + vetorJogo[2][0] == 3) {
+                    resposta = true;
+                } else if (vetorJogo[0][0] + vetorJogo[1][0] + vetorJogo[2][0] == 3) {
+                    resposta = true;
+                } else if (vetorJogo[0][1] + vetorJogo[1][1] + vetorJogo[2][1] == 3) {
+                    resposta = true;
+                } else if (vetorJogo[0][2] + vetorJogo[1][2] + vetorJogo[2][2] == 3) {
                     resposta = true;
                 }
 
