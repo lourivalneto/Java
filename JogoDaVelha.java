@@ -137,23 +137,23 @@ public class Exer06 {
         }
     }
 
-    public static boolean verificaGanhador1(int[][] array) {
+    public static boolean verificaGanhador1(int[][] vetorJogo) {
         
         boolean resposta = false;
         
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (array[0][0] + array[0][1] + array[0][2] == -3) {
+        for (int i = 0; i < vetorJogo.length; i++) {
+            for (int j = 0; j < vetorJogo[i].length; j++) {
+                if (vetorJogo[0][0] + vetorJogo[0][1] + vetorJogo[0][2] == -3) {
                     resposta = true;
 
-                } else if (array[1][0] + array[1][1] + array[1][2] == -3) {
+                } else if (vetorJogo[1][0] + vetorJogo[1][1] + vetorJogo[1][2] == -3) {
                     resposta = true;
-                } else if (array[2][0] + array[2][1] + array[2][2] == -3) {
+                } else if (vetorJogo[2][0] + vetorJogo[2][1] + vetorJogo[2][2] == -3) {
                     resposta = true;
-                } else if (array[0][0] + array[1][1] + array[2][2] == -3) {
+                } else if (vetorJogo[0][0] + vetorJogo[1][1] + vetorJogo[2][2] == -3) {
                     resposta = true;
-                } else if (array[0][2] + array[1][1] + array[2][0] == -3) {
+                } else if (vetorJogo[0][2] + vetorJogo[1][1] + vetorJogo[2][0] == -3) {
                     resposta = true;
                 }
 
@@ -164,23 +164,23 @@ public class Exer06 {
 
     }
     
-    public static boolean verificaGanhador2(int[][] array) {
+    public static boolean verificaGanhador2(int[][] vetorJogo) {
         
         boolean resposta = false;
         
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (array[0][0] + array[0][1] + array[0][2] == 3) {
+        for (int i = 0; i < vetorJogo.length; i++) {
+            for (int j = 0; j < vetorJogo[i].length; j++) {
+                if (vetorJogo[0][0] + vetorJogo[0][1] + vetorJogo[0][2] == 3) {
                     resposta = true;
 
-                } else if (array[1][0] + array[1][1] + array[1][2] == 3) {
+                } else if (vetorJogo[1][0] + vetorJogo[1][1] + vetorJogo[1][2] == 3) {
                     resposta = true;
-                } else if (array[2][0] + array[2][1] + array[2][2] == 3) {
+                } else if (vetorJogo[2][0] + vetorJogo[2][1] + vetorJogo[2][2] == 3) {
                     resposta = true;
-                } else if (array[0][0] + array[1][1] + array[2][2] == 3) {
+                } else if (vetorJogo[0][0] + vetorJogo[1][1] + vetorJogo[2][2] == 3) {
                     resposta = true;
-                } else if (array[0][2] + array[1][1] + array[2][0] == 3) {
+                } else if (vetorJogo[0][2] + vetorJogo[1][1] + vetorJogo[2][0] == 3) {
                     resposta = true;
                 }
 
