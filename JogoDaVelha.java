@@ -23,18 +23,20 @@ public class Exer06 {
 
         int[][] jogoDaVelha = new int[3][3];
 
-        System.out.println("\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t_ _ _ __|_ _ _ _|__ _ _ _\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t_ _ _ __|_ _ _ _|__ _ _ _\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n" +
-        "\t\t\t|\t|\n\n\n");
+        System.out.println(
+            "\tCOLUNA 1 COLUNA 2 COLUNA 3\n" +
+            "\n\t\t|\t|\n" +
+            "LINHA 1 \t|\t|\n" +
+            "\t\t|\t|\n" +
+            "\t_ _ _ __|_ _ _ _|__ _ _ _\n" +
+            "\t\t|\t|\n" +
+            "LINHA 2\t\t|\t|\n" +
+            "\t\t|\t|\n" +
+            "\t_ _ _ __|_ _ _ _|__ _ _ _\n" +
+            "\t\t|\t|\n" +
+            "\t\t|\t|\n" +
+            "LINHA 3\t\t|\t|\n" +
+            "\t\t|\t|\n");
 
         for (int i = 0; i < jogoDaVelha.length; i++) {
             for (int j = 0; j < jogoDaVelha[i].length; j++) {
