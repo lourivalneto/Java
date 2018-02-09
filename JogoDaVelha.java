@@ -23,18 +23,18 @@ public class Exer06 {
 
         int[][] jogoDaVelha = new int[3][3];
 
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t_ _ _ __|_ _ _ _|__ _ _ _");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t_ _ _ __|_ _ _ _|__ _ _ _");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t\t|\t|");
-        System.out.println("\t\t\t|\t|");
+        System.out.println("\t\t\t|\t|\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t_ _ _ __|_ _ _ _|__ _ _ _\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t_ _ _ __|_ _ _ _|__ _ _ _\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t\t|\t|\n" +
+        "\t\t\t|\t|\n");
         System.out.println("");
         System.out.println("");
 
