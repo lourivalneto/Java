@@ -43,15 +43,15 @@ public class JogoDaVelhaTeste {
                 + "LINHA 3\t\t|\t|\n"
                 + "\t\t|\t|\n");
 
-        for (int i = 0; i < matrizJogo.length; i++) {
-            for (int j = 0; j < matrizJogo[i].length; j++) {
-                if (j % 2 == 0) {
+        for (int i = 0; i < 9; i++) {
+            
+                if (i % 2 == 0) {
                     iniciaJogador1(matrizJogo, nomeJogador1);
 
                 } else {
                     iniciaJogador2(matrizJogo, nomeJogador2);
                 }
-            }
+            
         }
     }
 
