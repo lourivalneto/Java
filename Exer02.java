@@ -66,7 +66,7 @@ public class Exer02 {
                     + "\n2) Consulta de saldo;"
                     + "\n3) Depósito;"
                     + "\n4) Verificar se já está no Cheque especial;"
-                    + "\n5)Sair");
+                    + "\n 5)Sair");
             opcao = scan.nextInt();
             if (opcao > 0 && opcao <= 5) {
                 opcaoValida = true;
