@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Exer02 {
 
     static ContaCorrente cliente1 = new ContaCorrente();
+    static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+        
 
         cliente1.cc = 37244;
         cliente1.ag = 258;
         cliente1.saldo = 2000;
         cliente1.limite = 1000;
         cliente1.especial = true;
-        //menuBanco();
         int opcao = menuBanco();
 
         if (opcao == 1) {
@@ -25,11 +25,10 @@ public class Exer02 {
             boolean pedidoSaque = cliente1.estadoParaSaque(quantiaPedidoSaque);
             if (pedidoSaque) {
                 total = cliente1.sacarDinheiro(quantiaPedidoSaque);
-                //System.out.println("Seu saldo: R$" + cliente1.saldo);
-                //System.out.println("Seu limite: R$" + cliente1.limite);
             } else {
                 System.out.println("Você não tem saldo e/ou limite suficiente"
                         + " para efetuar este saque.");
+                cliente1.consultarSaldo();
             }
 
             retornaAoMenu();
@@ -58,7 +57,6 @@ public class Exer02 {
     }
 
     static int menuBanco() {
-        Scanner scan = new Scanner(System.in);
         boolean opcaoValida = false;
         int opcao = 0;
         while (!opcaoValida) {
@@ -80,7 +78,6 @@ public class Exer02 {
     }
 
     static void retornaAoMenu() {
-        Scanner scan = new Scanner(System.in);
         boolean opcaoValida = false;
         String[] args = new String[0];
         int op = 0;
@@ -102,7 +99,6 @@ public class Exer02 {
     }
 
     static void telaInicialSemAtribuicoes() {
-        Scanner scan = new Scanner(System.in);
         int opcao = menuBanco();
 
         if (opcao == 1) {
@@ -112,11 +108,10 @@ public class Exer02 {
             boolean pedidoSaque = cliente1.estadoParaSaque(quantiaPedidoSaque);
             if (pedidoSaque) {
                 total = cliente1.sacarDinheiro(quantiaPedidoSaque);
-                //System.out.println("Seu saldo: R$" + cliente1.saldo);
-                //System.out.println("Seu limite: R$" + cliente1.limite);
             } else {
                 System.out.println("Você não tem saldo e/ou limite suficiente"
                         + " para efetuar este saque.");
+                cliente1.consultarSaldo();
             }
 
             retornaAoMenu();
