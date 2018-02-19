@@ -13,6 +13,96 @@ public class JogoVelha {
 	private String nomeJogador1 = "";
 	private String nomeJogador2 = "";
 	
+	public JogoVelha(Scanner scan, char[][] jogoVelha, boolean ganhou, int jogada, char sinal, int linha, int coluna,
+			String nomeJogador1, String nomeJogador2) {
+		super();
+		this.scan = scan;
+		this.jogoVelha = jogoVelha;
+		this.ganhou = ganhou;
+		this.jogada = jogada;
+		this.sinal = sinal;
+		this.linha = linha;
+		this.coluna = coluna;
+		this.nomeJogador1 = nomeJogador1;
+		this.nomeJogador2 = nomeJogador2;
+	}
+	
+	public JogoVelha() {
+		
+	}
+	
+	public Scanner getScan() {
+		return scan;
+	}
+
+	public void setScan(Scanner scan) {
+		this.scan = scan;
+	}
+
+	public char[][] getJogoVelha() {
+		return jogoVelha;
+	}
+
+	public void setJogoVelha(char[][] jogoVelha) {
+		this.jogoVelha = jogoVelha;
+	}
+
+	public boolean isGanhou() {
+		return ganhou;
+	}
+
+	public void setGanhou(boolean ganhou) {
+		this.ganhou = ganhou;
+	}
+
+	public int getJogada() {
+		return jogada;
+	}
+
+	public void setJogada(int jogada) {
+		this.jogada = jogada;
+	}
+
+	public char getSinal() {
+		return sinal;
+	}
+
+	public void setSinal(char sinal) {
+		this.sinal = sinal;
+	}
+
+	public int getLinha() {
+		return linha;
+	}
+
+	public void setLinha(int linha) {
+		this.linha = linha;
+	}
+
+	public int getColuna() {
+		return coluna;
+	}
+
+	public void setColuna(int coluna) {
+		this.coluna = coluna;
+	}
+
+	public String getNomeJogador1() {
+		return nomeJogador1;
+	}
+
+	public void setNomeJogador1(String nomeJogador1) {
+		this.nomeJogador1 = nomeJogador1;
+	}
+
+	public String getNomeJogador2() {
+		return nomeJogador2;
+	}
+
+	public void setNomeJogador2(String nomeJogador2) {
+		this.nomeJogador2 = nomeJogador2;
+	}
+	
 	public void iniciarJogoVelha() {
 		System.out.println("Nome do Jogador 1:");
 		this.nomeJogador1 = scan.nextLine();
