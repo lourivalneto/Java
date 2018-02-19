@@ -1,0 +1,119 @@
+run:
+Digite o nome do Jogador 1: 
+Adriano
+Digite o nome do Jogador 2: 
+Leandro
+			|	|
+			|	|
+			|	|
+		_ _ _ __|_ _ _ _|__ _ _ _
+			|	|
+			|	|
+			|	|
+		_ _ _ __|_ _ _ _|__ _ _ _
+			|	|
+			|	|
+			|	|
+			|	|
+
+
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+0
+Coluna: 
+1
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+0
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+1
+	Leandro, em que posição você irá marcar o "X")?: 
+Linha: 
+0
+Coluna: 
+1
+Opção(ões) inválida(s). Tente novamente.
+	Leandro, em que posição você irá marcar o "X"?: 
+Linha: 
+1
+Coluna: 
+0
+Opção(ões) inválida(s). Tente novamente.
+	Leandro, em que posição você irá marcar o "X"?: 
+Linha: 
+1
+Coluna: 
+1
+Essa posição já está marcada. Tente outra posição.
+Opção(ões) inválida(s). Tente novamente.
+	Leandro, em que posição você irá marcar o "X"?: 
+Linha: 
+1
+Coluna: 
+0
+Opção(ões) inválida(s). Tente novamente.
+	Leandro, em que posição você irá marcar o "X"?: 
+Linha: 
+1
+Coluna: 
+2
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+1
+Essa posição já está marcada. Tente outra posição.
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+2
+Essa posição já está marcada. Tente outra posição.
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+0
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+2
+Essa posição já está marcada. Tente outra posição.
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+3
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+3
+Essa posição já está marcada. Tente outra posição.
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+1
+Coluna: 
+4
+Opção(ões) inválida(s). Tente novamente.
+	Adriano, em que posição você irá marcar a bolinha(O)?: 
+Linha: 
+2
+Coluna: 
+1
+	Leandro, em que posição você irá marcar o "X")?: 
+Linha: 
+CONSTRUÇÃO PARADA (tempo total: 3 minutos 55 segundos)
