@@ -12,6 +12,26 @@ public class Aluno {
 	private double somaNotas1 = 0;
 	private double somaNotas2 = 0;
 	private double somaNotas3 = 0;
+	
+	
+
+	public Aluno(Scanner scan, String nome, String matricula, String curso, String[] disciplinas, double[][] notas,
+			double somaNotas1, double somaNotas2, double somaNotas3) {
+		super();
+		this.scan = scan;
+		this.nome = nome;
+		this.matricula = matricula;
+		this.curso = curso;
+		this.disciplinas = disciplinas;
+		this.notas = notas;
+		this.somaNotas1 = somaNotas1;
+		this.somaNotas2 = somaNotas2;
+		this.somaNotas3 = somaNotas3;
+	}
+	
+	public Aluno() {
+		
+	}
 
 	public String getNome() {
 		return nome;
