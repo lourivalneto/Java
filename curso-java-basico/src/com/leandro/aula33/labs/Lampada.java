@@ -11,6 +11,22 @@ public class Lampada {
 	private double vidaUtil;
 	private boolean estado = false;
 	
+	public Lampada(String cor, double potencia, double garantia, double tensao, double altura, double largura,
+			double vidaUtil, boolean estado) {
+		super();
+		this.cor = cor;
+		this.potencia = potencia;
+		this.garantia = garantia;
+		this.tensao = tensao;
+		this.altura = altura;
+		this.largura = largura;
+		this.vidaUtil = vidaUtil;
+		this.estado = estado;
+	}
+	public Lampada() {
+		
+	}
+	
 	private boolean ligarLampada() {
 		this.estado = true;
 		return this.estado;
@@ -42,21 +58,7 @@ public class Lampada {
 	public String getCor() {
 		return cor;
 	}
-	public Lampada(String cor, double potencia, double garantia, double tensao, double altura, double largura,
-			double vidaUtil, boolean estado) {
-		super();
-		this.cor = cor;
-		this.potencia = potencia;
-		this.garantia = garantia;
-		this.tensao = tensao;
-		this.altura = altura;
-		this.largura = largura;
-		this.vidaUtil = vidaUtil;
-		this.estado = estado;
-	}
-	public Lampada() {
-		
-	}
+	
 	public void setCor(String cor) {
 		this.cor = cor;
 	}

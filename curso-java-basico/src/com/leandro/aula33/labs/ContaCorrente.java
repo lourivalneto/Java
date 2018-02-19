@@ -10,6 +10,24 @@ public class ContaCorrente {
 	private int cc;
 	private int ag;
 	private boolean respostaPedidoSaque;
+	
+	public ContaCorrente() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ContaCorrente(Scanner scan, double saldo, double limite, boolean especial, int cc, int ag,
+			boolean respostaPedidoSaque) {
+		super();
+		this.scan = scan;
+		this.saldo = saldo;
+		this.limite = limite;
+		this.especial = especial;
+		this.cc = cc;
+		this.ag = ag;
+		this.respostaPedidoSaque = respostaPedidoSaque;
+	}
+	
+	
 
 	public Scanner getScan() {
 		return scan;
