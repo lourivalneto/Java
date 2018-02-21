@@ -8,6 +8,8 @@ public class TestaContador {
 		System.out.println(cont.getContaInstanciacoes());
 		Contador cont2 = new Contador();
 		System.out.println(cont2.getContaInstanciacoes());
+		Contador cont3 = new Contador();
+		System.out.println(cont3.getContaInstanciacoes());
 
 	}
 
