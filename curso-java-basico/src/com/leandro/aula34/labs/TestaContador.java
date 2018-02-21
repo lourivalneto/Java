@@ -1,6 +1,4 @@
-package com.leandro.aula34;
-
-import com.leandro.aula34.labs.Contador;
+package com.leandro.aula34.labs;
 
 public class TestaContador {
 
