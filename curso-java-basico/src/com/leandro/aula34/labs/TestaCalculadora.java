@@ -14,6 +14,9 @@ public class TestaCalculadora {
 		
 		System.out.println("Teste do método elevar(): " + Calculadora.elevar(5, 5));
 		
+		// EXERCÍCIO 3 NESSA MESMA CLASSE
+		System.out.println("Teste do método fatorar(): " + Calculadora.fatorar(10));
+		
 
 	}
 

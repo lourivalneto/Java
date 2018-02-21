@@ -6,6 +6,7 @@ public class Calculadora {
 	private static int multiplicacao;
 	private static int divisao;
 	private static double potencia;
+	private static double fatorial = 1;
 	
 	
 	
@@ -39,6 +40,14 @@ public class Calculadora {
 		}
 		return potencia;
 		
+	}
+	
+	// EXERCÍCIO 3 NESSA MESMA CLASSE
+	public static double fatorar(int num) {
+		for(int i=1; i <= num; i++) {
+			fatorial *= i;
+		}
+		return fatorial;
 	}
 
 }
