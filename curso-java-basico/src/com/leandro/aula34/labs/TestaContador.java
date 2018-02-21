@@ -10,6 +10,14 @@ public class TestaContador {
 		System.out.println(Contador.getContaInstanciacoes());
 		Contador cont3 = new Contador();
 		System.out.println(Contador.getContaInstanciacoes());
+		
+		Contador.zerarContador();
+		System.out.println(Contador.getContaInstanciacoes());
+		
+		Contador cont4 = new Contador();
+		System.out.println(Contador.getContaInstanciacoes());
+		Contador cont5 = new Contador();
+		System.out.println(Contador.getContaInstanciacoes());
 
 	}
 

@@ -20,5 +20,9 @@ public class Contador {
 	public static void setContaInstanciacoes(int contaInstanciacoes) {
 		Contador.contaInstanciacoes = contaInstanciacoes;
 	}
+	
+	public static void zerarContador() {
+		contaInstanciacoes = 0;
+	}
 
 }
