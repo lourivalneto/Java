@@ -5,11 +5,11 @@ public class TestaContador {
 	public static void main(String[] args) {
 
 		Contador cont = new Contador();
-		System.out.println(cont.getContaInstanciacoes());
+		System.out.println(Contador.getContaInstanciacoes());
 		Contador cont2 = new Contador();
-		System.out.println(cont2.getContaInstanciacoes());
+		System.out.println(Contador.getContaInstanciacoes());
 		Contador cont3 = new Contador();
-		System.out.println(cont3.getContaInstanciacoes());
+		System.out.println(Contador.getContaInstanciacoes());
 
 	}
 
