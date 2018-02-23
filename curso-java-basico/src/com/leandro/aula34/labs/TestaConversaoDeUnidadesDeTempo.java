@@ -53,22 +53,7 @@ public class TestaConversaoDeUnidadesDeTempo {
 				System.out.println(formato.format(minutos) + " minuto = " + ConversaoDeUnidadesDeTempo.converterMS(minutos) + " s.");
 			}
 			
-			menuValido = false;
-			op = 0;
-			while (!menuValido) {
-				System.out.println("Continuar convertendo? [1) Sim / 2) Não]");
-				op = scan.nextInt();
-				if (op > 0 && op < 3) {
-					menuValido = true;
-				} else {
-					System.out.println("\t\tAviso" + "\n\t\tOpção inválida. Tente novamente.");
-				}
-				if (op == 1) {
-					tela();
-				} else if(op == 2){
-					System.exit(0);
-				}
-			}
+			retornarAoMenu();
 			
 			break;
 		case 2:
@@ -81,22 +66,7 @@ public class TestaConversaoDeUnidadesDeTempo {
 				System.out.println(formato.format(horas) + " hora = " + ConversaoDeUnidadesDeTempo.converterHM(horas) + " min.");
 			}
 			
-			menuValido = false;
-			op = 0;
-			while (!menuValido) {
-				System.out.println("Continuar convertendo? [1) Sim / 2) Não]");
-				op = scan.nextInt();
-				if (op > 0 && op < 3) {
-					menuValido = true;
-				} else {
-					System.out.println("\t\tAviso" + "\n\t\tOpção inválida. Tente novamente.");
-				}
-				if (op == 1) {
-					tela();
-				} else if(op == 2){
-					System.exit(0);
-				}
-			}
+			retornarAoMenu();
 			
 			break;
 		case 3:
@@ -109,22 +79,7 @@ public class TestaConversaoDeUnidadesDeTempo {
 				System.out.println(formato.format(dias) + " dia = " + ConversaoDeUnidadesDeTempo.converterDH(dias) + " H.");
 			}
 			
-			menuValido = false;
-			op = 0;
-			while (!menuValido) {
-				System.out.println("Continuar convertendo? [1) Sim / 2) Não]");
-				op = scan.nextInt();
-				if (op > 0 && op < 3) {
-					menuValido = true;
-				} else {
-					System.out.println("\t\tAviso" + "\n\t\tOpção inválida. Tente novamente.");
-				}
-				if (op == 1) {
-					tela();
-				} else if(op == 2){
-					System.exit(0);
-				}
-			}
+			retornarAoMenu();
 			
 			break;
 		case 4:
@@ -137,22 +92,7 @@ public class TestaConversaoDeUnidadesDeTempo {
 				System.out.println(formato.format(semanas) + " semana = " + ConversaoDeUnidadesDeTempo.converterSD(semanas) + " D.");
 			}
 			
-			menuValido = false;
-			op = 0;
-			while (!menuValido) {
-				System.out.println("Continuar convertendo? [1) Sim / 2) Não]");
-				op = scan.nextInt();
-				if (op > 0 && op < 3) {
-					menuValido = true;
-				} else {
-					System.out.println("\t\tAviso" + "\n\t\tOpção inválida. Tente novamente.");
-				}
-				if (op == 1) {
-					tela();
-				} else if(op == 2){
-					System.exit(0);
-				}
-			}
+			retornarAoMenu();
 			
 			break;
 		case 5:
@@ -165,22 +105,7 @@ public class TestaConversaoDeUnidadesDeTempo {
 				System.out.println(formato.format(meses) + " mês = " + ConversaoDeUnidadesDeTempo.converterMD(meses) + " D.");
 			}
 			
-			menuValido = false;
-			op = 0;
-			while (!menuValido) {
-				System.out.println("Continuar convertendo? [1) Sim / 2) Não]");
-				op = scan.nextInt();
-				if (op > 0 && op < 3) {
-					menuValido = true;
-				} else {
-					System.out.println("\t\tAviso" + "\n\t\tOpção inválida. Tente novamente.");
-				}
-				if (op == 1) {
-					tela();
-				} else if(op == 2){
-					System.exit(0);
-				}
-			}
+			retornarAoMenu();
 			
 			break;
 		case 6:
@@ -193,26 +118,30 @@ public class TestaConversaoDeUnidadesDeTempo {
 				System.out.println(formato.format(anos) + " ano = " + ConversaoDeUnidadesDeTempo.converterAD(anos) + " D.");
 			}
 			
-			menuValido = false;
-			op = 0;
-			while (!menuValido) {
-				System.out.println("Continuar convertendo? [1) Sim / 2) Não]");
-				op = scan.nextInt();
-				if (op > 0 && op < 3) {
-					menuValido = true;
-				} else {
-					System.out.println("\t\tAviso" + "\n\t\tOpção inválida. Tente novamente.");
-				}
-				if (op == 1) {
-					tela();
-				} else if(op == 2){
-					System.exit(0);
-				}
-			}
+			retornarAoMenu();
 			
 			break;
 		case 7:
 			System.exit(0);
+		}
+	}
+	
+	public static void retornarAoMenu() {
+		menuValido = false;
+		op = 0;
+		while (!menuValido) {
+			System.out.println("Continuar convertendo? [1) Sim / 2) Não]");
+			op = scan.nextInt();
+			if (op > 0 && op < 3) {
+				menuValido = true;
+			} else {
+				System.out.println("\t\tAviso" + "\n\t\tOpção inválida. Tente novamente.");
+			}
+			if (op == 1) {
+				tela();
+			} else if(op == 2){
+				System.exit(0);
+			}
 		}
 	}
 }
