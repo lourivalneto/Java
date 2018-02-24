@@ -51,13 +51,13 @@ public class Calculadora {
 		return fatorial;
 	}
 
-	public static int fatorial(int num) {
+	public static int fatorialR(int num) {
 
 		if (num == 0) {
 			return 1;
 		}
 
-		return num * fatorial(num - 1);
+		return num * fatorialR(num - 1);
 	}
 
 }

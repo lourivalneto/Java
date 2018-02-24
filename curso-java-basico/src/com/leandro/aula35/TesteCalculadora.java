@@ -7,7 +7,7 @@ public class TesteCalculadora {
 		double fatorialNR = Calculadora.fatorialNR(5);
 		System.out.println(fatorialNR);
 		
-		int fadorialR = Calculadora.fatorial(5);
+		int fadorialR = Calculadora.fatorialR(5);
 		System.out.println(fadorialR);
 
 	}

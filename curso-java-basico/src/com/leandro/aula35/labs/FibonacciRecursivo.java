@@ -13,7 +13,7 @@ public class FibonacciRecursivo {
 		}
 
 		return fibonacciR(nTermo - 1) + fibonacciR(nTermo - 2);
-							//5  	  +					4
+							
 
 	}
 
