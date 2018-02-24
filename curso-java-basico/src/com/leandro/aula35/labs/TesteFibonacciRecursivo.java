@@ -1,4 +1,4 @@
-package com.leandro.aula35.labs;
+package com.leandro.aula35.labs; // que trava
 
 import java.util.Scanner;
 
