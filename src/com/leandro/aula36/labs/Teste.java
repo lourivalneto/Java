@@ -24,10 +24,16 @@ public class Teste {
         contato2.setNome("Andreia");
         contato2.setTelefone("11 917160-0171");
         contato2.setEmail("caradepau@invos.com.br");
+        
+        Contato contato3 = new Contato();
+        contato3.setNome("Cascatinhas");
+        contato3.setTelefone("22 96060-2402");
+        contato3.setEmail("ixcroto@ombado.com");
 
-        Contato[] contatos = new Contato[2];
+        Contato[] contatos = new Contato[3];
         contatos[0] = contato1;
         contatos[1] = contato2;
+        contatos[2] = contato3;
 
         agenda.setContatos(contatos);
 
