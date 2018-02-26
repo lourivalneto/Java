@@ -50,11 +50,12 @@ public class TesteCurso {
         for (int i = 0; i < alunos.length; i++) {
             System.out.println("Digite o nome do " + (i + 1) + "º aluno.");
             alunos[i].setNome(scan.nextLine());
-            System.out.println("Digite a matrícula do " + alunos[i].getNome());
+            System.out.println("Digite a matrícula do(a) " + alunos[i].getNome());
             alunos[i].setMatricula(scan.nextLine());
             for (int j = 0; j < notas.length; j++) {
+                
                 System.out.println("Digite a " + (j + 1) + "ª nota do(a) "
-                        + "aluno(a) " + alunos[i].getNome() + ".");
+                        + alunos[i].getNome() + ".");
                 notas[j] = Double.parseDouble(scan.nextLine());
             }
 
@@ -73,7 +74,8 @@ public class TesteCurso {
             
             for (int j = 0; j < alunos[i].getNotas().length; j++) {
                 if (j == alunos[i].getNotas().length - 1) {
-                    System.out.print(alunos[i].getNotas()[j] + ".");
+                    System.out.print(alunos[i].getNotas()[j] + "."
+                            + "\n-----------------------------------------");
                     break;
                 }
                 System.out.print(alunos[i].getNotas()[j] + "; ");
