@@ -24,7 +24,7 @@ public class TesteCurso {
 
     static Curso curso = new Curso();
 
-    static double notas[] = new double[4];
+    //static double notas[] = new double[4];
 
     public static void main(String[] args) {
         System.out.println("Digite o nome do curso.");
@@ -38,16 +38,17 @@ public class TesteCurso {
         alunos[3] = aluno4;
         alunos[4] = aluno5;
 
-        inserirDadosAluno(alunos);
+        inserirDadosAluno();
         curso.setAlunos(alunos);
 
         imprimirDadosCurso();
 
     }
 
-    public static void inserirDadosAluno(Aluno[] alunos) {
+    public static void inserirDadosAluno() {
 
         for (int i = 0; i < alunos.length; i++) {
+            double notas[] = new double[4];
             System.out.println("Digite o nome do " + (i + 1) + "º aluno.");
             alunos[i].setNome(scan.nextLine());
             System.out.println("Digite a matrícula do(a) " + alunos[i].getNome());
