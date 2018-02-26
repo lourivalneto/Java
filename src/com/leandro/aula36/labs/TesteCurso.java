@@ -19,19 +19,25 @@ public class TesteCurso {
     static Aluno aluno3 = new Aluno();
     static Aluno aluno4 = new Aluno();
     static Aluno aluno5 = new Aluno();
+    static Professor professor = new Professor();
 
     static Aluno[] alunos = new Aluno[5];
 
     static Curso curso = new Curso();
 
-    //static double notas[] = new double[4]; O PROBLEMA ESTAVA AQUI, FAZENDO COM QUE AS NOTAS FOSSEM SEMPRE AS ÚLTIMAS PARA TODOS OS
-    //ALUNOS. ################## CORRIGIDO NA LINHA 52 ############################
-
+    //static double notas[] = new double[4];
     public static void main(String[] args) {
+        curso.setProfessor(professor);
         System.out.println("Digite o nome do curso.");
         curso.setNome(scan.nextLine());
         System.out.println("Digite o horário do curso.");
         curso.setHorario(scan.nextLine());
+        System.out.println("Digite o nome do professor.");
+        professor.setNome(scan.nextLine());
+        System.out.println("E-mail do professor: ");
+        professor.setEmail(scan.nextLine());
+        System.out.println("Departamento do profº: ");
+        professor.setDepartamento(scan.nextLine());
 
         alunos[0] = aluno1;
         alunos[1] = aluno2;
@@ -55,7 +61,7 @@ public class TesteCurso {
             System.out.println("Digite a matrícula do(a) " + alunos[i].getNome());
             alunos[i].setMatricula(scan.nextLine());
             for (int j = 0; j < notas.length; j++) {
-                
+
                 System.out.println("Digite a " + (j + 1) + "ª nota do(a) "
                         + alunos[i].getNome() + ".");
                 notas[j] = Double.parseDouble(scan.nextLine());
@@ -67,20 +73,34 @@ public class TesteCurso {
     }
 
     public static void imprimirDadosCurso() {
-        System.out.println("Curso: " + curso.getNome() + ";");
-        System.out.println("Horário: " + curso.getHorario());
+        if (curso != null && curso.getNome() != null && curso.getHorario() != null
+                && curso.getProfessor() != null && curso.getProfessor().getNome() != null
+                && curso.getProfessor().getEmail() != null
+                && curso.getProfessor().getDepartamento() != null) {
+            System.out.println("Curso: " + curso.getNome() + ";");
+            System.out.println("Horário: " + curso.getHorario());
+            System.out.println("Professor: " + curso.getProfessor().getNome());
+            System.out.println("E-mail: " + curso.getProfessor().getEmail());
+            System.out.println("Departamento: " + curso.getProfessor().getDepartamento());
+        }
 
         for (int i = 0; i < alunos.length; i++) {
-            System.out.println("Aluno(a): " + alunos[i].getNome() + "\tMatrícula"
-                    + ": " + alunos[i].getMatricula() + "\nNotas: ");
-            
+            if (alunos[i] != null && alunos[i].getNome() != null
+                    && alunos[i].getMatricula() != null) {
+                System.out.println("Aluno(a): " + alunos[i].getNome() + "\tMatrícula"
+                        + ": " + alunos[i].getMatricula() + "\nNotas: ");
+            }
+
             for (int j = 0; j < alunos[i].getNotas().length; j++) {
-                if (j == alunos[i].getNotas().length - 1) {
-                    System.out.print(alunos[i].getNotas()[j] + "."
-                            + "\n-----------------------------------------");
-                    break;
+                if (alunos[i].getNotas()[j] != 0) {
+                    if (j == alunos[i].getNotas().length - 1) {
+                        System.out.print(alunos[i].getNotas()[j] + "."
+                                + "\n-----------------------------------------");
+                        break;
+                    }
+                    System.out.print(alunos[i].getNotas()[j] + "; ");
                 }
-                System.out.print(alunos[i].getNotas()[j] + "; ");
+
             }
             System.out.println();
         }
