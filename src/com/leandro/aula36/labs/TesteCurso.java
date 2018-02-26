@@ -25,7 +25,7 @@ public class TesteCurso {
     static Curso curso = new Curso();
 
     //static double notas[] = new double[4]; O PROBLEMA ESTAVA AQUI, FAZENDO COM QUE AS NOTAS FOSSEM SEMPRE AS ÚLTIMAS PARA TODOS OS
-    //ALUNOS
+    //ALUNOS. ################## CORRIGIDO NA LINHA 52 ############################
 
     public static void main(String[] args) {
         System.out.println("Digite o nome do curso.");
