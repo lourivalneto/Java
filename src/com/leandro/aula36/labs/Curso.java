@@ -15,6 +15,7 @@ public class Curso {
     
     private String nome;
     private String horario;
+    private Professor professor;
     private Aluno[] alunos;
     
     
@@ -62,6 +63,22 @@ public class Curso {
     public void setHorario(String horario) {
         this.horario = horario;
     }
+
+    /**
+     * @return the professor
+     */
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    /**
+     * @param professor the professor to set
+     */
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    
 
     
     
