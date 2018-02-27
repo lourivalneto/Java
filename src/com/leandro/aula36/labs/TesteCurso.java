@@ -8,7 +8,7 @@ package com.leandro.aula36.labs;
 import java.util.Scanner;
 
 /**
- * COMPLETO
+ * Ainda incompleto
  * @author leandro
  */
 public class TesteCurso {
