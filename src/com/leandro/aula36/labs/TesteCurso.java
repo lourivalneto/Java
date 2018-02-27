@@ -77,31 +77,17 @@ public class TesteCurso {
                 && curso.getProfessor() != null && curso.getProfessor().getNome() != null
                 && curso.getProfessor().getEmail() != null
                 && curso.getProfessor().getDepartamento() != null) {
-            System.out.println("Curso: " + curso.getNome() + ";");
-            System.out.println("Horário: " + curso.getHorario());
-            System.out.println("Professor: " + curso.getProfessor().getNome());
-            System.out.println("E-mail: " + curso.getProfessor().getEmail());
-            System.out.println("Departamento: " + curso.getProfessor().getDepartamento());
+            System.out.println(curso.obterInfo());
+            System.out.println(professor.obterInfo());
         }
 
         for (int i = 0; i < alunos.length; i++) {
             if (alunos[i] != null && alunos[i].getNome() != null
                     && alunos[i].getMatricula() != null) {
-                System.out.println("Aluno(a): " + alunos[i].getNome() + "\tMatrícula"
-                        + ": " + alunos[i].getMatricula() + "\nNotas: ");
+                System.out.println(alunos[i].obterInfo());
             }
 
-            for (int j = 0; j < alunos[i].getNotas().length; j++) {
-                if (alunos[i].getNotas()[j] != 0) {
-                    if (j == alunos[i].getNotas().length - 1) {
-                        System.out.print(alunos[i].getNotas()[j] + "."
-                                + "\n-----------------------------------------");
-                        break;
-                    }
-                    System.out.print(alunos[i].getNotas()[j] + "; ");
-                }
-
-            }
+            
             System.out.println();
         }
     }

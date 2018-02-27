@@ -57,6 +57,35 @@ class Aluno {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+    
+    public String obterInfo(){
+        String info = "Aluno(a): " + this.getNome() + "\tMatrícula"
+                        + ": " + this.getMatricula() + "\nNotas: ";
+        double soma = 0;
+        double media = 0;
+        for (int j = 0; j < this.getNotas().length; j++) {
+            
+            if (this.getNotas()[j] != 0) {
+                if (j == this.getNotas().length - 1) {
+                    info += this.getNotas()[j] + "."
+                            + "\nMédia: ";
+                    soma += this.getNotas()[j];
+                    break;
+                }
+                info += this.getNotas()[j] + "; ";
+                soma += this.getNotas()[j];
+            }
+        }
+        media = soma / 4;
+        info += media + ".";
+        if(media >= 7){
+            info += "\n\tAluno APROVADO.\n---------------------------------------------\n";
+        } else {
+            info += "\n\tAluno REPROVADO.\n---------------------------------------------\n";
+        }
+        
+        return info;
+    }
 
     
     

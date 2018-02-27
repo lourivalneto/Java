@@ -77,7 +77,13 @@ public class Curso {
     public void setProfessor(Professor professor) {
         this.professor = professor;
     }
+    static Aluno a = new Aluno();
 
+    public String obterInfo(){
+        String info = "Nome do curso: " + this.getNome() + ";\n"
+                + "Horário do curso: " + this.getHorario() + ";\n";
+        return info;
+    }
     
 
     
