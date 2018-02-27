@@ -5,6 +5,8 @@
  */
 package com.leandro.aula36.labs;
 
+import java.util.Scanner;
+
 /**
  *
  * @author leandro
@@ -12,36 +14,38 @@ package com.leandro.aula36.labs;
 public class Teste {
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         Agenda agenda = new Agenda();
-        agenda.setNome("Mensal");
-
-        Contato contato1 = new Contato();
-        contato1.setNome("Roberval");
-        contato1.setTelefone("67 97060-6070");
-        contato1.setEmail("nao@tem.com.br");
-
-        Contato contato2 = new Contato();
-        contato2.setNome("Andreia");
-        contato2.setTelefone("11 917160-0171");
-        contato2.setEmail("caradepau@invos.com.br");
+        System.out.println("Digite o nome da Agenda.");
+        agenda.setNome(scan.nextLine());
         
-        Contato contato3 = new Contato();
-        contato3.setNome("Cascatinhas");
-        contato3.setTelefone("22 96060-2402");
-        contato3.setEmail("ixcroto@ombado.com");
-
+        
         Contato[] contatos = new Contato[3];
-        contatos[0] = contato1;
-        contatos[1] = contato2;
-        contatos[2] = contato3;
-
+        
+        
+        
+        for(int i = 0; i < contatos.length; i++){
+            Contato c = new Contato();
+            System.out.println("Digite o nome do " + (i+1) + "º contato.");
+            String nome = scan.nextLine();
+            c.setNome(nome);
+            System.out.println("Digite o telefone do(a) " + c.getNome());
+            String telefone = scan.nextLine();
+            c.setTelefone(telefone);
+            System.out.println("Digite o e-mail do(a) " + c.getNome());
+            String email = scan.nextLine();
+            c.setEmail(email);
+            
+            
+            
+            contatos[i] = c;
+            
+        }
+        
         agenda.setContatos(contatos);
-
+        
         if (agenda != null && agenda.getContatos() != null) {
-            for(Contato c : agenda.getContatos()){
-                System.out.println("Nome: " + c.getNome() + "; Telefone: " 
-                        + c.getTelefone() + "; E-mail: " + c.getEmail() + ".");
-            }
+            System.out.println(agenda.obterInfo());
         }
     }
 

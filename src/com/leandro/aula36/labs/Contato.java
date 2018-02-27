@@ -56,5 +56,13 @@ public class Contato {
         this.email = email;
     }
     
+    public String obeterInfo(){
+        String info = "Nome: " + this.nome + ";\n";
+        info += "Telefone: " + this.getTelefone() + ";\n";
+        info += "E-mail: " + this.getEmail() + "."
+                + "\n--------------------\n";
+        return info;
+    }
+    
     
 }

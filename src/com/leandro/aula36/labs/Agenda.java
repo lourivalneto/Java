@@ -41,5 +41,15 @@ public class Agenda {
         this.nome = nome;
     }
     
-    
+    public String obterInfo(){
+        String info = "Nome do curso: " + this.nome + ";\t\n";
+        if(contatos != null){
+            info += "-----Alunos-----\n";
+            for(Contato c : contatos){
+                info += c.obeterInfo();
+            }
+        }
+        
+        return info;
+    }
 }
