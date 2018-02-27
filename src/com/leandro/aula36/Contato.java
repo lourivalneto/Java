@@ -4,7 +4,7 @@ public class Contato {
     
     private String nome;
     private Endereco endereco;
-    private String telefone;
+    private Telefone[] telefones;
 
     /**
      * @return the endereco
@@ -28,15 +28,18 @@ public class Contato {
         this.nome = nome;
     }
 
-    
-
-    public String getTelefone() {
-        return telefone;
+    /**
+     * @return the telefones
+     */
+    public Telefone[] getTelefones() {
+        return telefones;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    /**
+     * @param telefones the telefones to set
+     */
+    public void setTelefones(Telefone[] telefones) {
+        this.telefones = telefones;
     }
-    
-    
+  
 }
