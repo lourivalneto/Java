@@ -57,8 +57,8 @@ public class Professor {
     }
     
     public String obterInfo(){
-        String info = "Professor: " + this.getNome() + ";\tDepartamento: "
-                + this.getDepartamento() + ";\tEmail: " + this.getEmail() + ".";
+        String info = "Professor: " + this.getNome() + "\tDepartamento: "
+                + this.getDepartamento() + "\tEmail: " + this.getEmail() + "";
         return info;
     }
     

@@ -12,7 +12,8 @@ import java.util.Scanner;
  * @author leandro
  */
 public class TesteCurso {
-
+    
+    static double[] mediasNotasAlunos = new double[5];
     static Scanner scan = new Scanner(System.in);
     static Aluno aluno1 = new Aluno();
     static Aluno aluno2 = new Aluno();
@@ -80,16 +81,19 @@ public class TesteCurso {
             System.out.println(curso.obterInfo());
             System.out.println(professor.obterInfo());
         }
-
+        double somaMediaNotasTurma = 0;
         for (int i = 0; i < alunos.length; i++) {
+            
             if (alunos[i] != null && alunos[i].getNome() != null
                     && alunos[i].getMatricula() != null) {
                 System.out.println(alunos[i].obterInfo());
+                mediasNotasAlunos[i] = alunos[i].media();
+                somaMediaNotasTurma += mediasNotasAlunos[i];
             }
-
-            
-            System.out.println();
         }
+        System.out.println("\t\t\tMÉDIA DA TURMA: " + (somaMediaNotasTurma / 5) + 
+                    "\n\n______________________________________________________"
+                            + "_______________________________________________\n");
     }
 
 }
