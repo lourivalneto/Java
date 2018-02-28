@@ -92,7 +92,7 @@ class Aluno {
         for (int i = 0; i < this.notas.length; i++) {
             soma += this.notas[i];
         }
-        media = soma / 4;
+        media = soma / notas.length;
         return media;
     }
 

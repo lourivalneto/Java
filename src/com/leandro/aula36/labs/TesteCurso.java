@@ -91,7 +91,7 @@ public class TesteCurso {
                 somaMediaNotasTurma += mediasNotasAlunos[i];
             }
         }
-        System.out.println("\t\t\tMÉDIA DA TURMA: " + (somaMediaNotasTurma / 5) + 
+        System.out.println("\t\t\tMÉDIA DA TURMA: " + (somaMediaNotasTurma / mediasNotasAlunos.length) + 
                     "\n\n______________________________________________________"
                             + "_______________________________________________\n");
     }
