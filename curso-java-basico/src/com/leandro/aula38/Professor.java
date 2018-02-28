@@ -7,7 +7,7 @@ public class Professor extends Pessoa {
     
     
 
-    /**
+    /**teste
      * @return the salario
      */
     public double getSalario() {
