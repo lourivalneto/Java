@@ -1,4 +1,4 @@
-
+//teste..
 package com.leandro.aula38;
 
 public class Aluno extends Pessoa {
@@ -10,8 +10,19 @@ public class Aluno extends Pessoa {
         super();
     }
     
+    
+    
 
-    public String getCurso() {
+    public Aluno(String nome, String endereco, String telefone, String curso) {
+		super(nome, endereco, telefone);
+		this.curso = curso;
+		
+	}
+
+
+
+
+	public String getCurso() {
         return curso;
     }
 
@@ -35,7 +46,11 @@ public class Aluno extends Pessoa {
         return true;
     }
 
-    
+    public void metodoQualquer() {
+    	super.setCpf("343434343443");
+    	
+    	this.setCpf("31325446465");
+    }
     
     
     

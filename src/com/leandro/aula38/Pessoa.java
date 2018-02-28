@@ -7,21 +7,18 @@ public class Pessoa {
     private String cpf;
     private String telefoneCelular;
 
-    public Pessoa() {  }
+    public Pessoa() {
+		
+	}
 
-    
-    
-    public Pessoa(String nome, String endereco, String telefone) {
-        super();
-        this.nome = nome;
-        this.endereco = endereco;
-        this.telefone = telefone;
-    }
-    
-    
-    
+	public Pessoa(String nome, String endereco, String telefone) {
+		super();
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+	}
 
-    /**
+	/**teste
      * @return the nome
      */
     public String getNome() {
