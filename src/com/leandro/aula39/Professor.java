@@ -1,11 +1,16 @@
 
-package com.leandro.aula38;
+package com.leandro.aula39;
 
 public class Professor extends Pessoa {
     private double salario;
     private String nomeCurso;
     
-    
+    public void verificarAcesso(){
+        this.setNomeVisibilidade("dfadsfadfs");
+        super.setNomeVisibilidade("dfasdfasdf");
+        super.nomeVisibilidade = "";
+        this.nomeVisibilidade = "";
+    }
 
     /**teste
      * @return the salario

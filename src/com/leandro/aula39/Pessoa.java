@@ -1,15 +1,24 @@
-package com.leandro.aula38;
+package com.leandro.aula39;
 
 public class Pessoa {
+
+    /**
+     * @param nomeVisibilidade the nomeVisibilidade to set
+     */
+    public void setNomeVisibilidade(String nomeVisibilidade) {
+        this.nomeVisibilidade = nomeVisibilidade;
+    }
     private String nome;
     private String endereco;
     private String telefone;
     private String cpf;
     private String telefoneCelular;
+    
+    protected String nomeVisibilidade;
 
     public Pessoa() {
-		
-	}
+	nomeVisibilidade = "adsfadfsd"	;
+    }
 
 	public Pessoa(String nome, String endereco, String telefone) {
 		super();
