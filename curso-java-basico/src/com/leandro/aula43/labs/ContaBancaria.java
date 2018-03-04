@@ -1,6 +1,6 @@
 package com.leandro.aula43.labs;
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
 	private String nomeCliente;
     private int numConta;
     private double saldo;
