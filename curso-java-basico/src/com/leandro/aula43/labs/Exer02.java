@@ -1,4 +1,4 @@
-package com.leandro.aula43.labs;
+package com.leandro.aula43.labs; //...
 
 import java.util.Scanner;
 
