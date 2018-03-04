@@ -70,6 +70,22 @@ public class Aluno {
 		return "Aluno [curso=" + curso + ", notas=" + Arrays.toString(notas) + "]";
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		
+		Aluno other = (Aluno) obj;
+		if(curso.equalsIgnoreCase(other.getCurso())) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+
     //@Override
     //public void imprimirEtiquetaEndereco() {
         //System.out.println(this.obterEtiquetaEndereco());
