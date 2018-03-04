@@ -40,27 +40,32 @@ public class Exer02 {
 		switch(op) {
 			case 1:
 				System.out.println("Digite o nome do exemplo 1 do menu.");
-				scan.next();
+				scan.nextLine();
 				pessoaFisica1.setNome(scan.nextLine());
 				System.out.println("Digite a renda para o exemplo 1 do menu (se for fora do limite do"
 						+ " exemplo, será retornado a própria renda).");
 				pessoaFisica1.setRenda(scan.nextDouble());
-				System.out.println("O IR a ser pago: R$" + pessoaFisica1.calcularIR());
+				System.out.println(pessoaFisica1.toString());
 				menuVoltar();
 				break;
 			case 2:
 				System.out.println("Digite o nome do exemplo 2 do menu.");
-				scan.next();
+				scan.nextLine();
 				pessoaFisica2.setNome(scan.nextLine());
 				System.out.println("Digite a renda para o exemplo 2 do menu (se for fora do limite do"
 						+ " exemplo, será retornado a própria renda).");
 				pessoaFisica2.setRenda(scan.nextDouble());
-				System.out.println("O IR a ser pago: R$" + pessoaFisica2.calcularIR());
+				System.out.println(pessoaFisica2.toString());
 				menuVoltar();
 				break;
 			case 3:
 				System.out.println("Digite o nome do exemplo 3 do menu.");
+				scan.nextLine();
 				pessoaFisica3.setNome(scan.nextLine());
+				System.out.println("Digite a renda para o exemplo 3 do menu (se for fora do limite do"
+						+ " exemplo, será retornado a própria renda).");
+				pessoaFisica3.setRenda(scan.nextDouble());
+				System.out.println(pessoaFisica3.toString());
 				menuVoltar();
 				break;
 			case 4:
