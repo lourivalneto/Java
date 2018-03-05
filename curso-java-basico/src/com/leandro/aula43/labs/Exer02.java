@@ -30,7 +30,9 @@ public class Exer02 {
 					+ "\n5) Informar renda para o exemplo 2 de uma pessoa jurídica;"
 					+ "\n6) Informar renda para o exemplo 3 de uma pessoa jurídica;"
 					+ "\n7) Sair.");
-			
+			for(int i = 0; i < 18; i++) {
+				System.out.println();
+			}
 			op = scan.nextInt();
 			if(op > 0 && op < 8) {
 				menuVoltarValido = true;
