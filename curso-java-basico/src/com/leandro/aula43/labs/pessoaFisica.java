@@ -100,17 +100,18 @@ public class pessoaFisica extends Contribuintes {
 	}
 
 	public double calcularIR() {
-		if (this.getRenda() > 0 && this.getRenda() <= 1400) {
+		if (this.getRenda() > 0 && this.getRenda() <= 1400 && this.getRenda() > 0) {
 			return this.getRenda() * this.getAL_RB_0_A_1400() - this.getPARCELA_DEDUCAO_0_A_1400();
-		} else if (this.getRenda() >= 1400.01 && this.getRenda() <= 2100) {
+		} else if (this.getRenda() >= 1400.01 && this.getRenda() <= 2100 && this.getRenda() > 0) {
 			return this.getRenda() * this.getAL_RB_1400_01_A_2100() - this.getPARCELA_DEDUCAO_1400_01_A_2100();
-		} else if (this.getRenda() >= 2100.01 && this.getRenda() <= 2800) {
+		} else if (this.getRenda() >= 2100.01 && this.getRenda() <= 2800 && this.getRenda() > 0) {
 			return this.getRenda() * this.getAL_RB_2100_01_A_2800() - this.getPARCELA_DEDUCAO_2100_01_A_2800();
-		} else if (this.getRenda() >= 2800.01 && this.getRenda() <= 3600) {
+		} else if (this.getRenda() >= 2800.01 && this.getRenda() <= 3600 && this.getRenda() > 0) {
 			return this.getRenda() * this.getAL_RB_2800_01_A_3600() - this.getPARCELA_DEDUCAO_2800_01_A_3600();
-		} else if (this.getRenda() >= 3600.01) {
+		} else if (this.getRenda() >= 3600.01 && this.getRenda() > 0) {
 			return this.getRenda() * this.getAL_RB_3600_01_PRA_MAIS() - this.getPARCELA_DEDUCAO_3600_01_PRA_MAIS();
 		}
+		System.out.println("Renda menor ou igual a zero.");
 		return this.getRenda();
 	}
 

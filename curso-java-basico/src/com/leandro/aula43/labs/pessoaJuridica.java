@@ -18,8 +18,11 @@ public class pessoaJuridica extends Contribuintes{
 
 	@Override
 	public String toString() {
-		return "Imposto de Renda para " + this.getNome() + ", sendo 10% da renda bruta da empresa: R$"
-				+ this.getCalculo();
+		if(this.getRenda() > 0) {
+			return "Imposto de Renda para " + this.getNome() + ", sendo 10% da renda bruta da empresa: R$"
+					+ this.getCalculo();
+		}
+		return "Renda menor ou igual a zero.";
 	}
 	
 	
