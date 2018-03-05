@@ -20,13 +20,13 @@ public class ContaEspecial extends ContaBancaria{
 	}
 
 	public double sacar(double valorSaque) {
-		if(this.getSaldo() + limite >= valorSaque) {
+		if(this.getSaldo() + limite >= valorSaque && valorSaque > 0) {
 			double diferencaSaldoDevedor = this.getSaldo() - valorSaque; // pode dar valor negativo
-			if(this.getSaldo() == 0) {
+			if(this.getSaldo() == 0 && valorSaque > 0) {
 				this.limite -= valorSaque;
-			} else if(this.getSaldo() >= valorSaque) {
+			} else if(this.getSaldo() >= valorSaque && valorSaque > 0) {
 				this.setSaldo(this.getSaldo() - valorSaque);
-			} else if(this.getSaldo() < valorSaque &&  this.getSaldo() + this.getLimite() > valorSaque) {
+			} else if(this.getSaldo() < valorSaque &&  this.getSaldo() + this.getLimite() > valorSaque && valorSaque > 0) {
 				this.setSaldo(0);
 				this.setLimite(this.limite + diferencaSaldoDevedor);
 				//tem 10 cliente pede saque de 100, então a diferencaSaldoPraZero = -90
