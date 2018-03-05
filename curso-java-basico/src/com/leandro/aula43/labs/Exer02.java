@@ -8,7 +8,7 @@ public class Exer02 {
 	private static pessoaFisica pessoaFisica2 =  new pessoaFisica();
 	private static pessoaFisica pessoaFisica3 =  new pessoaFisica();
 	
-	private static pessoaJuridica pessoaJuridica1 = new pessoaJuridica();
+	//private static pessoaJuridica pessoaJuridica1 = new pessoaJuridica();
 	private static pessoaJuridica pessoaJuridica2 = new pessoaJuridica();
 	private static pessoaJuridica pessoaJuridica3 = new pessoaJuridica();
 
@@ -18,6 +18,7 @@ public class Exer02 {
 	}
 	
 	private static void telaPrincipal() {
+		 pessoaJuridica pessoaJuridica1 = new pessoaJuridica();
 		
 		boolean menuVoltarValido = false;
 		int op = 0;
@@ -29,6 +30,7 @@ public class Exer02 {
 					+ "\n5) Informar renda para o exemplo 2 de uma pessoa jurídica;"
 					+ "\n6) Informar renda para o exemplo 3 de uma pessoa jurídica;"
 					+ "\n7) Sair.");
+			
 			op = scan.nextInt();
 			if(op > 0 && op < 8) {
 				menuVoltarValido = true;
@@ -79,9 +81,23 @@ public class Exer02 {
 				menuVoltar();
 				break;
 			case 5:
+				System.out.println("Digite o nome do exemplo 2 de PJ do menu.");
+				scan.nextLine();
+				pessoaJuridica2.setNome(scan.nextLine());
+				System.out.println("Digite a renda para o exemplo 2 de PJ do menu (se for fora do limite do"
+						+ " exemplo, será retornado a própria renda).");
+				pessoaJuridica2.setRenda(scan.nextDouble());
+				System.out.println(pessoaJuridica2.toString());
 				menuVoltar();
 				break;
 			case 6:
+				System.out.println("Digite o nome do exemplo 3 de PJ do menu.");
+				scan.nextLine();
+				pessoaJuridica3.setNome(scan.nextLine());
+				System.out.println("Digite a renda para o exemplo 3 de PJ do menu (se for fora do limite do"
+						+ " exemplo, será retornado a própria renda).");
+				pessoaJuridica3.setRenda(scan.nextDouble());
+				System.out.println(pessoaJuridica3.toString());
 				menuVoltar();
 				break;
 			case 7:
@@ -106,6 +122,9 @@ public class Exer02 {
 			}
 		}
 		if(op == 1) {
+			for(int i = 0; i < 100; i++) {
+				System.out.println();
+			}
 			telaPrincipal();
 		} else if(op == 2) {
 			System.exit(0);
