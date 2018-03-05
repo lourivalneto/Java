@@ -26,7 +26,8 @@ public class ContaEspecial extends ContaBancaria{
 				this.limite -= valorSaque;
 			} else if(this.getSaldo() >= valorSaque && valorSaque > 0) {
 				this.setSaldo(this.getSaldo() - valorSaque);
-			} else if(this.getSaldo() < valorSaque &&  this.getSaldo() + this.getLimite() > valorSaque && valorSaque > 0) {
+			} else if(this.getSaldo() < valorSaque &&  this.getSaldo() 
+					+ this.getLimite() > valorSaque && valorSaque > 0) {
 				this.setSaldo(0);
 				this.setLimite(this.limite + diferencaSaldoDevedor);
 				//tem 10 cliente pede saque de 100, então a diferencaSaldoPraZero = -90
