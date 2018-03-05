@@ -37,7 +37,7 @@ public abstract class ContaBancaria {
 		if(saldo > 0 && saldo >= valorSaque && valorSaque > 0) {
 			this.saldo -= valorSaque;
 		}
-		System.out.println("Saldo insuficiente ou tentativa de enriquecimento ilícito.");
+		System.out.println("Saldo insuficiente ou tentativa de obter 100 anos de perdão.");
 		return this.getSaldo();
 	}
 	
