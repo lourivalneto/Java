@@ -34,6 +34,7 @@ public class ContaEspecial extends ContaBancaria{
 				// this.getSaldo() recebe ele mesmo - 90
 			}
 		}
+		System.out.println("Saldo insuficiente ou tentativa de enriquecimento ilícito.");
 		return this.getSaldo();
 	}
 	
