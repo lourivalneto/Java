@@ -16,14 +16,15 @@ public class Piramide extends Figura3D implements DimensaoSuperficial,DimensaoVo
 		apotemaPiramideRegular = apotemaPiramide * arestaBase;
 		areaTotalFacesLaterais = 4 * apotemaPiramideRegular;
 		areaBase = Math.pow(arestaBase, 2);
-		areaPiramide = areaPiramide + areaTotalFacesLaterais;
-		System.out.println(areaPiramide);
+		areaPiramide = areaBase + areaTotalFacesLaterais;
+		System.out.print(areaPiramide);
 		
 	}
 
 	@Override
 	public void calcularVolume() {
 		double volumePiramide = (this.getAreaBase() * this.getAltura()) / 3;
+		System.out.print(volumePiramide + "\n");
 		
 	}
 

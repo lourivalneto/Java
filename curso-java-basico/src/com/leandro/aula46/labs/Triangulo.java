@@ -51,7 +51,7 @@ public class Triangulo extends Figura2D implements DimensaoSuperficial{
 	@Override
 	public void calcularArea() {
 		this.area = this.getBase() * this.getAltura();
-		System.out.println(this.area);
+		System.out.print(this.area);
 		
 	}
 
