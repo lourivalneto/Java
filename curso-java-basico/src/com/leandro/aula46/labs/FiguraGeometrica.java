@@ -1,6 +1,6 @@
 package com.leandro.aula46.labs;
 
-public class FiguraGeometrica implements DimensaoSuperficial,DimensaoVolumetrica{
+public abstract class FiguraGeometrica implements DimensaoSuperficial,DimensaoVolumetrica{
 	private String nome;
 	private String cor;
 	@Override
