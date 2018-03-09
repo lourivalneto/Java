@@ -19,30 +19,39 @@ public class Teste {
 		figGeo[4] = cilindro;
 		figGeo[5] = piramide;
 		
+		circulo.setNome("Círculo");
+		circulo.setCor("Branca");
 		circulo.setRaio(30);
 		
+		quadrado.setNome("Quadrado");
 		quadrado.setLado(10);
 		
+		triangulo.setNome("Triângulo");
 		triangulo.setBase(12);
 		triangulo.setAltura(15);
 		
+		cubo.setNome("Cubo");
 		cubo.setLadoQuadrado(10);
 		
+		cilindro.setNome("Cilindro");
 		cilindro.setAltura(20);
 		cilindro.setRaio(5);
 		cilindro.setAreaBase(52);
 		
-		//piramide.set
+		piramide.setNome("Pirâmide");
+		piramide.setArestaBase(18);
+		piramide.setArestaBase(150);
+		piramide.setAltura(500);
 		
 		for(FiguraGeometrica f: figGeo) {
-			System.out.print("Área: ");
+			System.out.print("Figura Geométrica: " + f.getNome() + " => Área: ");
 			f.calcularArea();
-			System.out.print(" |");
+			
 			if(f instanceof Figura3D) {
-				System.out.print("Volume: ");
+				System.out.print(" => Volume: ");
 				f.calcularVolume();
-				System.out.print(" |");
 			}
+			System.out.print("\n");
 		}
 		
 		
