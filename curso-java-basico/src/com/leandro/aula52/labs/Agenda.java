@@ -1,5 +1,6 @@
 package com.leandro.aula52.labs;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Agenda extends Contato {
@@ -12,8 +13,8 @@ public class Agenda extends Contato {
 
 	public void adicionarContato() throws AgendaCheiaException {
 		this.contContatos++;
-		this.setId(this.getId() + 1);
-		//Contato[] contatos =  new Contato[this.contContatos];
+		this.setId(contContatos);
+		/*//Contato[] contatos =  new Contato[this.contContatos];*/
 		Contato contatoDaVez = new Contato();
 		System.out.println("Digite o nome do novo contato.");
 		
@@ -34,13 +35,11 @@ public class Agenda extends Contato {
 				
 				throw new AgendaCheiaException();
 				
-			} /*else {
-				System.out.println(contContatos -1);
-				this.contatos[contContatos - 1] = contatoDaVez;
-			}*/
-		} catch (ArrayIndexOutOfBoundsException | AgendaCheiaException e) {
+			} 
+		} catch (InputMismatchException e) {
+			System.out.println("Erro de tipo de dado inválido.");
 			e.getStackTrace();
-		}
+		} 
 		
 	}
 	
@@ -56,13 +55,14 @@ public class Agenda extends Contato {
 
 
 
-	public void consultarContatos() throws ContatoNaoExisteException {
+	public void consultarContatos() throws ContatoNaoExisteException, AgendaCheiaException {
 		for(Contato c : this.contatos) {
 			System.out.println("Digite a id do contato para exibir suas informações.");
 			int id = scan.nextInt();
 			try {
 				if(this.contatos[id - 1] == null) {
 					throw new ContatoNaoExisteException(id - 1);
+					
 				}
 				
 				System.out.println("Nome: " + this.contatos[id - 1].getNome()
@@ -71,6 +71,7 @@ public class Agenda extends Contato {
 				
 			} catch (ArrayIndexOutOfBoundsException e) {
 				e.getStackTrace();
+				
 				//e.getMessage();
 				
 			}

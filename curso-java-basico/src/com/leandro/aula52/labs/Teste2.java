@@ -2,20 +2,15 @@ package com.leandro.aula52.labs;
 
 import java.util.Scanner;
 
-public class Teste extends Agenda{
+public class Teste2 extends Agenda{
 	private static Scanner scan = new Scanner(System.in);
 	private static Agenda agenda = new Agenda();
 	
-	public static void main(String[] args)  {
-		try {
+	public static void main(String[] args) throws AgendaCheiaException, ContatoNaoExisteException  {
+		
 			menu();
 			voltarMenu();
-		} catch (ContatoNaoExisteException e) {
-			e.printStackTrace();
-		} catch (AgendaCheiaException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+		
 
 
 	}
@@ -38,18 +33,16 @@ public class Teste extends Agenda{
 		
 		switch(op) {
 		case 1:
-			try {
-				agenda.consultarContatos();
-			} catch (ContatoNaoExisteException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
+				try {
+					agenda.consultarContatos();
+				} catch(ContatoNaoExisteException e){
+					System.out.println("Ocorreu um erro.");
+					e.getStackTrace();
+				}
+				
+			
 				voltarMenu();
-			} catch (ContatoNaoExisteException | AgendaCheiaException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 			break;
 		case 2:
 			
