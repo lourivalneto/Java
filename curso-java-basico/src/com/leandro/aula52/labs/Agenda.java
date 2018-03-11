@@ -34,10 +34,11 @@ public class Agenda extends Contato {
 				
 				throw new AgendaCheiaException();
 				
-			} else {
+			} /*else {
+				System.out.println(contContatos -1);
 				this.contatos[contContatos - 1] = contatoDaVez;
-			}
-		} catch (AgendaCheiaException e) {
+			}*/
+		} catch (ArrayIndexOutOfBoundsException | AgendaCheiaException e) {
 			e.getStackTrace();
 		}
 		

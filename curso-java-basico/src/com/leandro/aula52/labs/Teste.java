@@ -11,10 +11,10 @@ public class Teste extends Agenda{
 			menu();
 			voltarMenu();
 		} catch (ContatoNaoExisteException e) {
-			//e.printStackTrace();
+			e.printStackTrace();
 		} catch (AgendaCheiaException e) {
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
+			e.printStackTrace();
 		} 
 
 
@@ -56,16 +56,16 @@ public class Teste extends Agenda{
 				agenda.adicionarContato();
 			} catch (AgendaCheiaException e) {
 				// TODO Auto-generated catch block
-				//e.printStackTrace();
+				e.printStackTrace();
 			}
 			try {
 				voltarMenu();
 			} catch (ContatoNaoExisteException e) {
 				// TODO Auto-generated catch block
-				//e.printStackTrace();
+				e.printStackTrace();
 			} catch (AgendaCheiaException e) {
 				// TODO Auto-generated catch block
-				//e.printStackTrace();
+				e.printStackTrace();
 			}
 			break;
 		case 3:
