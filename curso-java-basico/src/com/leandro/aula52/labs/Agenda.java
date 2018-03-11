@@ -29,8 +29,15 @@ public class Agenda extends Contato {
 		//contatos[contContatos - 1] = contatoDaVez;
 		try {
 			//this.setContatos(contatos);
-			this.contatos[contContatos - 1] = contatoDaVez;
-		} catch (ArrayIndexOutOfBoundsException e) {
+			
+			if(this.contContatos -1 > 2) {
+				
+				throw new AgendaCheiaException();
+				
+			} else {
+				this.contatos[contContatos - 1] = contatoDaVez;
+			}
+		} catch (AgendaCheiaException e) {
 			e.getStackTrace();
 		}
 		
