@@ -6,13 +6,21 @@ public class Teste extends Agenda{
 	private static Scanner scan = new Scanner(System.in);
 	private static Agenda agenda = new Agenda();
 	
-	public static void main(String[] args) throws ContatoNaoExisteException, AgendaCheiaException {
-		menu();
+	public static void main(String[] args)  {
+		try {
+			menu();
+			voltarMenu();
+		} catch (ContatoNaoExisteException e) {
+			//e.printStackTrace();
+		} catch (AgendaCheiaException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		} 
 
 
 	}
 
-	public static void menu() throws ContatoNaoExisteException, AgendaCheiaException {
+	public static void menu() {
 		int op = 0;
 		
 		boolean menuValido = false;
@@ -30,12 +38,35 @@ public class Teste extends Agenda{
 		
 		switch(op) {
 		case 1:
-			agenda.consultarContatos();
-			voltarMenu();
+			try {
+				agenda.consultarContatos();
+			} catch (ContatoNaoExisteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				voltarMenu();
+			} catch (ContatoNaoExisteException | AgendaCheiaException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+			}
 			break;
 		case 2:
-			agenda.adicionarContato();
-			voltarMenu();
+			try {
+				agenda.adicionarContato();
+			} catch (AgendaCheiaException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+			}
+			try {
+				voltarMenu();
+			} catch (ContatoNaoExisteException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+			} catch (AgendaCheiaException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+			}
 			break;
 		case 3:
 			System.exit(0);

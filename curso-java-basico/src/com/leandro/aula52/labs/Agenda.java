@@ -52,11 +52,22 @@ public class Agenda extends Contato {
 		for(Contato c : this.contatos) {
 			System.out.println("Digite a id do contato para exibir suas informações.");
 			int id = scan.nextInt();
-			if(this.contatos[id - 1] != null) {
+			try {
+				if(this.contatos[id - 1] == null) {
+					throw new ContatoNaoExisteException(id - 1);
+				}
+				
 				System.out.println("Nome: " + this.contatos[id - 1].getNome()
 						+ "\tTelefone: " + this.contatos[id - 1].getTelefone() + ".");
-				break;
+					
+				
+			} catch (ArrayIndexOutOfBoundsException e) {
+				e.getStackTrace();
+				//e.getMessage();
+				
 			}
+			
+			break;
 			
 		}
 		
