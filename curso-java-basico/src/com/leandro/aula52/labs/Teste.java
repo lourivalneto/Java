@@ -69,7 +69,23 @@ public class Teste extends Agenda{
 			}
 			break;
 		case 3:
-			System.exit(0);
+			String opc = "";
+			boolean respValida = false;
+			while(!respValida) {
+				System.out.println("Tem certeza que deseja sair? S/s-Sim; N/n-Não");
+				opc = scan.next();
+				
+				if(opc.equalsIgnoreCase("s") || opc.equalsIgnoreCase("n")) {
+					respValida = true;
+				} else {
+					System.out.println("Opção inválida. Tente novamente.");
+				}
+			}
+			if(opc.equalsIgnoreCase("s")) {
+				System.exit(0);
+			} else {
+				menu();
+			}
 			break;
 		}
 		
@@ -90,7 +106,25 @@ public class Teste extends Agenda{
 		if(op == 1) {
 			menu();
 		} else {
-			System.exit(0);
+			String opc = "";
+			boolean respValida = false;
+			while(!respValida) {
+				System.out.println("Tem certeza que deseja sair? S/s-Sim; N/n-Não");
+				opc = scan.next();
+				
+				if(opc.equalsIgnoreCase("s") || opc.equalsIgnoreCase("n")) {
+					respValida = true;
+				} else {
+					System.out.println("Opção inválida. Tente novamente.");
+				}
+			}
+			if(opc.equalsIgnoreCase("s")) {
+				System.exit(0);
+			} else {
+				menu();
+			}
+			
+			
 		}
 	}
 

@@ -13,7 +13,7 @@ public class Agenda extends Contato {
 	public void adicionarContato() throws AgendaCheiaException {
 		this.contContatos++;
 		this.setId(this.getId() + 1);
-		Contato[] contatos =  new Contato[this.contContatos];
+		//Contato[] contatos =  new Contato[this.contContatos];
 		Contato contatoDaVez = new Contato();
 		System.out.println("Digite o nome do novo contato.");
 		
