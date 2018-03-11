@@ -26,7 +26,7 @@ public class Agenda extends Contato {
 		+ contatoDaVez.getNome() + ", Telefone: " + contatoDaVez.getTelefone()
 		+ ", ID: " + contatoDaVez.getId() + ".");
 		
-		//contatos[contContatos - 1] = contatoDaVez;
+		
 		try {
 			//this.setContatos(contatos);
 			
