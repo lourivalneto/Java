@@ -23,10 +23,10 @@ public class Teste2 extends Agenda{
 			System.out.println("1) Consultar um contato da Agenda;"
 					+ "\n2) Adicionar um contato;"
 					+ "\n3) Sair.");
-			scan.next();
 			try {
-				String entrada = scan.nextLine();
-				op = Integer.parseInt(entrada);
+				//String entrada = scan.nextLine();
+				//op = Integer.parseInt(scan.nextLine());
+				op = Integer.parseInt(scan.nextLine());
 				if(op > 0 && op < 4) {
 					menuValido = true;
 				} else {
@@ -43,8 +43,8 @@ public class Teste2 extends Agenda{
 				try {
 					agenda.consultarContatos();
 				} catch(ContatoNaoExisteException e){
-					System.out.println("Ocorreu um erro.");
-					e.getStackTrace();
+					//System.out.println("Contato não existe.");
+					System.out.println(e.getMessage());
 				}
 				
 			
