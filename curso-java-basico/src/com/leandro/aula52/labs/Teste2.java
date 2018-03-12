@@ -23,12 +23,19 @@ public class Teste2 extends Agenda{
 			System.out.println("1) Consultar um contato da Agenda;"
 					+ "\n2) Adicionar um contato;"
 					+ "\n3) Sair.");
-			op = scan.nextInt();
-			if(op > 0 && op < 4) {
-				menuValido = true;
-			} else {
+			scan.next();
+			try {
+				String entrada = scan.nextLine();
+				op = Integer.parseInt(entrada);
+				if(op > 0 && op < 4) {
+					menuValido = true;
+				} else {
+					throw new Exception();
+				}
+			} catch(Exception e) {
 				System.out.println("Opção inválida. Tente novamente.");
 			}
+
 		}
 		
 		switch(op) {
