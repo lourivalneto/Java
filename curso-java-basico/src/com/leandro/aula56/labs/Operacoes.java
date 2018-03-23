@@ -42,5 +42,10 @@ public enum Operacoes {
 		return this.operacao;
 	}
 	
+	public String toString() {
+		String s =  this.operacao + "";
+		return s;
+	}
+	
 	public abstract double executarOperacao(double x, double y);
 }
