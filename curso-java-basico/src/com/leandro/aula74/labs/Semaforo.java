@@ -23,6 +23,7 @@ public class Semaforo implements Runnable {
 				System.out.println("Semáforo está: " + this.cor + "\n");
 				for(int i = 0; i < 1000; i++) {
 					System.out.println((i+1) + "º segundo no " + this.cor);
+					
 					Thread.sleep(1000);
 					synchronized (this) {
 						while(estaSuspensa) {

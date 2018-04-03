@@ -11,15 +11,19 @@ public class ExerSemaforo {
 
 		while(true) {
 			try {
-				Semaforo semaCor1 = new Semaforo(CoresSemaforos.Vermelho);
+				Semaforo semaCor1 = new Semaforo(CoresSemaforos.Verde);
 				Thread.sleep(10000);
 				semaCor1.suspend();
 				System.out.println();
 				Semaforo semaCor2 = new Semaforo(CoresSemaforos.Amarelo);
+				
 				Thread.sleep(2000);
+				System.out.println("Atenção! Vai fechar.");
 				semaCor2.suspend();
+				Thread.sleep(2000);
+				
 				System.out.println();
-				Semaforo semaCor3 = new Semaforo(CoresSemaforos.Verde);
+				Semaforo semaCor3 = new Semaforo(CoresSemaforos.Vermelho);
 				Thread.sleep(10000);
 				semaCor3.suspend();
 				System.out.println();
