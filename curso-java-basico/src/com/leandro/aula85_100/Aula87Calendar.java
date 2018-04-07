@@ -31,5 +31,7 @@ public class Aula87Calendar {
 		System.out.println(hoje.get(Calendar.DAY_OF_MONTH));
 
 	}
+	
+	
 
 }
