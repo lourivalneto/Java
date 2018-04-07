@@ -1,9 +1,10 @@
 package com.leandro.aula85_100;
 
-import java.sql.Date;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class Aula89SimpleDateFormat {
@@ -17,23 +18,23 @@ public class Aula89SimpleDateFormat {
 		System.out.println(sdf.format(data.getTime()));
 		
 		
-		Date hoje = new Date(118,3,6);
+		Date hoje = new Date();
 		
 		System.out.println(sdf.format(hoje));
 		
 		String d = sdf.format(hoje);
-		// Incompatibilidade de versões e deprecated daqui pra baixo
-		/*SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
 		String minhaData = "20/02/2000";
 		
 		try {
-			java.util.Date minhaDataEmDate = sdf.parse(minhaData);
+			Date minhaDataEmDate = sdf1.parse(minhaData);
 			System.out.println(minhaDataEmDate);
 			
 			System.out.println(sdf.format(minhaDataEmDate));
 		} catch (ParseException e) {
 			e.printStackTrace();
-		}*/
+		}
 		
 		
 
