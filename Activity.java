@@ -18,17 +18,10 @@ public class NomeDaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_conversor_moedas);
+        setContentView(R.layout.nome_da_activity);
         setTitle("Título da Activity");
-        ConexaoJsoup conexao = new ConexaoJsoup(this); // INSTÂNCIA DA CLASSE ASYNC TASK QUE FAZ A CONEXÃO
-        StringBuilder retornoConexao = conexao.doInBackground(); // RETORNO DOS MEUS text() DENTRO DAS TAGS DOS SITES PESQUISADOS
         caixaTexto = findViewById(R.id.caixaTexto);
-        try {
-            caixaTexto.setText(retornoConexao);
-        } catch (Exception e) {
-            System.out.println("Erro da Caixa de Texto: ");
-            e.printStackTrace();
-        }
+        ConexaoJsoup conexao = new ConexaoJsoup(this);
 
     }
 }
