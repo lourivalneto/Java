@@ -11,7 +11,7 @@ public class Lampada {
     boolean estado;
     
     boolean ligarDesligar(boolean pedido){
-        if(pedido == true){
+        if(pedido){
             estado = true;
         } else {
             estado = false;
